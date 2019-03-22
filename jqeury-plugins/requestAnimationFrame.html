@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>requestAnimationFrame 新一代的定时器</title>
+</head>
+<body>
+<script>
+  var i = 0
+
+  function render() {
+    if (i === 10) return 10
+    requestAnimationFrame(function () {
+      i = i + 1
+      console.log(i)
+      render()
+    })
+  }
+
+  render()
+</script>
+</body>
+</html>

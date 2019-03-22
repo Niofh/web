@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css3简单弹幕</title>
+  <style>
+    .block {
+      position: relative;
+      margin: 20px auto;
+      width: 300px;
+      height: 300px;
+      border: 1px solid #e1f3d8;
+      overflow: hidden;
+    }
+
+    .barrage {
+      position: absolute;
+      white-space: nowrap;
+      animation: barrage 5s infinite linear;
+    }
+
+    .b1 {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    @keyframes barrage {
+      from {
+        left: 100%;
+        transform: translate3d(0, 0, 0);
+      }
+      to {
+        left: 0;
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="block">
+  <div class="barrage">
+
+    <div class="b1">我是弹幕1</div>
+    <div class="b1">我是弹幕2</div>
+    <div class="b1">我是弹幕3</div>
+    <div class="b1">我是弹幕3</div>
+    <div class="b1">我是弹幕3</div>
+    <div class="b1">我是弹幕3</div>
+    <div class="b1">我是弹幕3</div>
+    <div class="b1">我是弹幕3</div>
+  </div>
+
+</div>
+
+</body>
+</html>
